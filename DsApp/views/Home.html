@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>主页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../libs/Index.css" />
+		<script src="../libs/Vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/Vant.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				border: 0px;
+				margin: 0px;
+				padding: 0px;
+			}
+			.van-search__content{
+				padding: 0px;
+
+			}
+			#top{
+				height: 68px;
+				width: 100%;
+				background-color: red;
+				color: white;
+			}
+			.van-search{
+				
+				background: rgba(255, 255, 255, 0)! important ;
+			}
+			.van-search .van-cell.van-cell--borderless.van-field{
+				margin: 5px 10px 5px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div id="top">
+				<van-search id="search" placeholder="请输入搜索关键词" v-model="value"></van-search>
+			</div>
+			<van-tabbar v-model="active" active-color="#07c160">
+				<van-tabbar-item icon="shop-o">首页</van-tabbar-item>
+				<van-tabbar-item icon="apps-o">分类 </van-tabbar-item>
+				<van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
+				<van-tabbar-item icon="user-o">个人中心</van-tabbar-item>
+			</van-tabbar>
+		</div>
+
+
+		<script type="text/javascript">
+			var app = new Vue({
+				el: "#app",
+				data: {
+					active:0,
+					value:""
+				}
+			})
+		</script>
+	</body>
+</html>
